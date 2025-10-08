@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btVerde = new System.Windows.Forms.Button();
             this.btAmarelo = new System.Windows.Forms.Button();
             this.btVermelho = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbNivel = new System.Windows.Forms.Label();
             this.btIniciar = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btVerde
@@ -45,6 +47,7 @@
             this.btVerde.Size = new System.Drawing.Size(97, 97);
             this.btVerde.TabIndex = 0;
             this.btVerde.UseVisualStyleBackColor = true;
+            this.btVerde.Click += new System.EventHandler(this.bt_Click);
             // 
             // btAmarelo
             // 
@@ -54,6 +57,7 @@
             this.btAmarelo.Size = new System.Drawing.Size(97, 97);
             this.btAmarelo.TabIndex = 1;
             this.btAmarelo.UseVisualStyleBackColor = true;
+            this.btAmarelo.Click += new System.EventHandler(this.bt_Click);
             // 
             // btVermelho
             // 
@@ -63,6 +67,7 @@
             this.btVermelho.Size = new System.Drawing.Size(97, 97);
             this.btVermelho.TabIndex = 2;
             this.btVermelho.UseVisualStyleBackColor = true;
+            this.btVermelho.Click += new System.EventHandler(this.bt_Click);
             // 
             // btAzul
             // 
@@ -72,6 +77,7 @@
             this.btAzul.Size = new System.Drawing.Size(97, 97);
             this.btAzul.TabIndex = 3;
             this.btAzul.UseVisualStyleBackColor = true;
+            this.btAzul.Click += new System.EventHandler(this.bt_Click);
             // 
             // label1
             // 
@@ -93,7 +99,7 @@
             // 
             // btIniciar
             // 
-            this.btIniciar.Location = new System.Drawing.Point(123, 341);
+            this.btIniciar.Location = new System.Drawing.Point(116, 319);
             this.btIniciar.Name = "btIniciar";
             this.btIniciar.Size = new System.Drawing.Size(97, 60);
             this.btIniciar.TabIndex = 6;
@@ -101,11 +107,15 @@
             this.btIniciar.UseVisualStyleBackColor = true;
             this.btIniciar.Click += new System.EventHandler(this.btIniciar_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 450);
+            this.ClientSize = new System.Drawing.Size(343, 409);
             this.Controls.Add(this.btIniciar);
             this.Controls.Add(this.lbNivel);
             this.Controls.Add(this.label1);
@@ -130,6 +140,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbNivel;
         private System.Windows.Forms.Button btIniciar;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
